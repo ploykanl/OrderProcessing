@@ -11,9 +11,12 @@ public class ShipmentFactory {
             // TODO (3a): "STANDARD" -> คืน new StandardShipment()
             // TODO (3b): "EXPRESS"  -> คืน new ExpressShipment()
             //   hint: case "STANDARD" -> new StandardShipment();
+            case "STANDARD" -> new StandardShipment();
+            case "EXPRESS" -> new ExpressShipment();
             /* ====== fill in the two cases here ====== */
             // TODO (3c): type อื่น -> throw IllegalArgumentException("unknown shipment type: " + type)
-            default -> /* ====== replace this ====== */ null;
+            /* ====== replace this ====== */
+            default -> throw new IllegalArgumentException("unknown shipment type: " + type);
         };
     }
 }
